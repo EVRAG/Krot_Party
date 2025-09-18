@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:4000'
+const API_BASE = 'http://93.115.203.113:4000'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
