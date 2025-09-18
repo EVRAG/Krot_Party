@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fix Frontend API URL</title>
+</head>
+<body>
+    <h1>Временное исправление фронтенда</h1>
+    <p>Проблема: фронтенд подключается к localhost:4000 вместо сервера</p>
+    
+    <h2>Решение через веб-консоль провайдера:</h2>
+    <ol>
+        <li>Зайдите в веб-консоль вашего VPS провайдера</li>
+        <li>Выполните команды:</li>
+    </ol>
+    
+    <pre style="background: #f5f5f5; padding: 10px; border-radius: 5px;">
+cd /root/Krot_Party
+git pull
+docker compose up -d --build frontend
+    </pre>
+    
+    <h2>Или вручную обновите docker-compose.yml:</h2>
+    <p>Замените строку:</p>
+    <pre style="background: #f5f5f5; padding: 10px; border-radius: 5px;">
+- VITE_API_BASE=http://backend:4000
+    </pre>
+    <p>На:</p>
+    <pre style="background: #f5f5f5; padding: 10px; border-radius: 5px;">
+- VITE_API_BASE=http://93.115.203.113:4000
+    </pre>
+    
+    <p>Затем выполните:</p>
+    <pre style="background: #f5f5f5; padding: 10px; border-radius: 5px;">
+docker compose up -d --build frontend
+    </pre>
+    
+    <h2>Проверка:</h2>
+    <p>После обновления откройте: <a href="http://93.115.203.113:5173" target="_blank">http://93.115.203.113:5173</a></p>
+</body>
+</html>
