@@ -1,0 +1,25 @@
+# Node
+node_modules/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Mac
+.DS_Store
+
+# Frontend build
+frontend/dist/
+
+# Docker
+**/.dockerignore
+Dockerfile*
+
+# Env
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
